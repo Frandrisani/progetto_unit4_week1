@@ -1,4 +1,4 @@
-import entities.*;
+import entities.*; //tutte le entità
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +14,7 @@ public class Main {
         do {
             System.out.println("Seleziona una modalità:");
             System.out.println("1: Inserisci media");
-            System.out.println("2: Visualizza un file inserito");
+            System.out.println("2: Esegui un file inserito");
             System.out.println("0: Esci");
             action = Integer.parseInt(scanner.nextLine());
 
