@@ -14,7 +14,7 @@ public class Audio extends MultimediaElement implements Playable, Volume {
         super(titolo);
         //Vslori di default
         this.duration = 0;
-        this.volume = 40;
+        this.volume = 4;
     }
 
     @Override
@@ -24,11 +24,13 @@ public class Audio extends MultimediaElement implements Playable, Volume {
         this.setTitolo(scanner.next());
         System.out.println("Inserisci la durata dell'audio");
         this.duration = scanner.nextInt();
-        for (int i = 0; i < getDuration(); i++) {
             //Navigando su StackOverflow, ho trovato questo metodo che permette di ripetere un carattere senza usare cicli
             //"repeat" --> "https://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string"
-            System.out.println(getTitolo() + "!".repeat(volume));
+        for (int i = 0; i < this.duration; i++) {
+            System.out.println(getTitolo() + " Volume: " + "!".repeat(volume));
         }
+            scanner.close();
+
     }
 
     @Override
@@ -39,7 +41,7 @@ public class Audio extends MultimediaElement implements Playable, Volume {
 
     @Override
     public void volumeUp() {
-        if (this.volume < 100) { this.volume += 10;
+        if (this.volume < 10) { this.volume += 1;
             this.play();
     }else{
             System.out.println("Il volume è già al massimo");
@@ -50,7 +52,7 @@ public class Audio extends MultimediaElement implements Playable, Volume {
 
     @Override
     public void volumeDown() {
-        if (this.volume > 0) { this.volume -= 10;
+        if (this.volume > 0) { this.volume -= 1;
         this.play();}else
 
     {

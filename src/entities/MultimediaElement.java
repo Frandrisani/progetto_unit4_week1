@@ -13,7 +13,7 @@ abstract class MultimediaElement {
     //Costruttore
     public MultimediaElement(String titolo) {
 
-        this.titolo = titolo;
+        this.titolo = "Titolo non definito";
     }
 
     //Setter e getter per il titolo
