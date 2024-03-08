@@ -25,6 +25,8 @@ public class Main {
                         System.out.println("1: Immagine");
                         System.out.println("2: Audio");
                         System.out.println("3: Video");
+                        System.out.println("4: Audio 2");
+                        System.out.println("5: Video 2");
                         int tipoFile = Integer.parseInt(scanner.nextLine());
 
                         switch (tipoFile) {
@@ -53,6 +55,24 @@ public class Main {
                                 lettore.aggiungiElemento(video, numElementi);
                                 numElementi++;
                                 break;
+                            case 4:
+                                Audio audio2 = new Audio("Default");
+                                System.out.println("Inserisci il titolo dell'audio numero 2: ");
+                                audio2.setTitolo(scanner.nextLine());
+                                System.out.println("Inserisci la durata dell'audio: ");
+                                audio2.setDuration(Integer.parseInt(scanner.nextLine()));
+                                lettore.aggiungiElemento(audio2, numElementi);
+                                numElementi++;
+                                break;
+                            case 5:
+                                Video video2 = new Video("Default");
+                                System.out.println("Inserisci il titolo del video numero 2: ");
+                                video2.setTitolo(scanner.nextLine());
+                                System.out.println("Inserisci la durata del video: ");
+                                video2.setDuration(Integer.parseInt(scanner.nextLine()));
+                                lettore.aggiungiElemento(video2, numElementi);
+                                numElementi++;
+                                break;
                             default:
                                 System.out.println("Tipo di file non valido.");
                         }
@@ -65,6 +85,7 @@ public class Main {
                     int posiz= Integer.parseInt(scanner.nextLine());
                     if (posiz >= 1 && posiz <= 5) {
                         lettore.eseguiElemento(posiz);
+
             } else{
                 System.out.println("Elemento non valido.");
             }

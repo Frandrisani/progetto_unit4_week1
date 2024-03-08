@@ -18,7 +18,7 @@ public class PlayerMultimediale {
 
     public void eseguiElemento(int posizione) {
         if (posizione >= 0 && posizione < elementi.length) {
-            MultimediaElement elemento = elementi[posizione];
+            MultimediaElement elemento = elementi[posizione - 1];
             if (elemento instanceof Playable) {
                 ((Playable) elemento).play();
             } else if (elemento instanceof Unplayable) {
@@ -30,4 +30,6 @@ public class PlayerMultimediale {
     public MultimediaElement[] getElementi() {
         return elementi;
     }
+
+
 }

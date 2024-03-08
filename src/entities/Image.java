@@ -21,9 +21,6 @@ public class Image extends MultimediaElement implements Unplayable, Brightness {
     //Metodi
     @Override
     public void show() {
-       Scanner scan = new Scanner(System.in);
-        System.out.println("Inserisci il titolo dell'immagine");
-        this.setTitolo(scan.nextLine());
         System.out.println("Titolo: " + this.getTitolo() + " Luminosità: " + " !".repeat(luminosita));
 
     }
